@@ -274,7 +274,9 @@
 					"page/aijiaren.html",
 					"libs/easymob-webim-sdk/jquery-1.11.1.js"
 				],
-				"refer": [],
+				"refer": [
+					"page/addPerson.html"
+				],
 				"priority": 0
 			},
 			"index.html": {
@@ -323,7 +325,25 @@
 			},
 			"page/aijiaren.html": {
 				"resources": [
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/aijiaren/jkda.jpg",
+					"images/aijiaren/wys.jpg",
+					"images/aijiaren/yytx.jpg",
+					"images/aijiaren/yyjl.jpg",
+					"images/aijiaren/tsfw.jpg",
+					"images/aijiaren/xtjc.jpg",
+					"images/aijiaren/xyjc.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/addPerson.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
