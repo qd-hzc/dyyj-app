@@ -270,7 +270,8 @@
 					"fonts/mui.ttf",
 					"page/tab-webview-subpage-chat.html",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"page/setting.html"
 				],
 				"refer": [],
 				"priority": 0

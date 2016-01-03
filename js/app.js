@@ -129,6 +129,7 @@
 					//设置
 					var settingButton = doc.getElementById('setting');
 					//settingButton.style.display = settings.autoLogin ? 'block' : 'none';
+					if(settingButton)
 					settingButton.addEventListener('tap', function(event) {
 						$.openWindow({
 							id: 'setting',
