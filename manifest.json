@@ -86,21 +86,13 @@
         "Maps": {
             "description": "管理地图插件"
         },
-        "Payment": {
-            "description": "管理支付插件"
-        },
-        "Push": {
-            "description": "管理推送消息插件"
-        },
-        "Share": {
-            "description": "管理社交分享插件"
-        },
+        
+        
+        
         "Speech": {
             "description": "管理语音识别插件"
         },
-        "Statistic": {
-            "description": "管理统计插件"
-        },
+        
         "Webview":{
         	"description": "窗口管理"
         },
@@ -231,7 +223,8 @@
 					"main.html",
 					"reg.html",
 					"page/main.html",
-					"setting.html"
+					"setting.html",
+					"forget_password.html"
 				],
 				"priority": 0
 			},
@@ -256,7 +249,13 @@
 				"priority": 0
 			},
 			"reg.html": {
-				"resources": [],
+				"resources": [
+					"fonts/mui.ttf",
+					"js/app.js",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/style.css"
+				],
 				"refer": [
 					"login.html"
 				],
@@ -283,13 +282,26 @@
 					"page/guide.html"
 				],
 				"priority": 0
+			},
+			"page/guide.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/guide/01_05.jpg",
+					"images/guide/01_02.jpg",
+					"images/guide/02_02.jpg",
+					"images/guide/03_02.jpg"
+				],
+				"refer": [
+					"login.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
 			"resources": [
 				"js/service.js",
 				"unlock.html",
-				"forget_password.html",
 				"images/sinaweibo.png",
 				"libs/easymob-webim-sdk/quickstart.md",
 				"images/weixin.png",
