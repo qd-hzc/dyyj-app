@@ -275,6 +275,17 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"page/setting.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"images/settings/touxiang.jpg",
+					"images/erweima/erweima.jpg"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
