@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<title>Hello MUI</title>
@@ -9,30 +10,102 @@
 
 		<link rel="stylesheet" href="../css/mui.min.css">
 		<style>
-			html,body {
+			html,
+			body {
 				background-color: #efeff4;
 			}
-			.title{
+			
+			.title {
 				margin: 20px 15px 10px;
 				color: #6d6d72;
 				font-size: 15px;
 			}
 		</style>
 	</head>
+
 	<body>
 		<div class="mui-content">
-			<div class="title">
-				<p>这是webview模式选项卡的第1个子页面</p>
-				<p>何谓webview模式？其实就是每个选项卡内容都是一个独立的webview，彼此之间互相独立、互不影响；
-					对于较为复杂的业务系统，推荐使用该模式。</p>
-				<p>基于webview模式的选项卡，支持原生加速的下拉刷新，点击第二个选项卡（“消息”），切换选项卡，体验下拉刷新；</p>
+			<div>
+				<img style="width: 100%;" src="../images/zxzx/05_01.jpg" />
+			</div>
+			<div style="position: absolute;top: 30%;width: 100%;text-align: center;">
+				<div id="zixun" style=" width: 50%;float: left;text-align: center;">
+					<img style="width: 60%;" src="../images/zxzx/05-2.png" />
+					<div>
+						<span>
+							资讯
+						</span>
+						<p>
+							健康问题随时问
+						</p>
+					</div>
+				</div>
+				<div id="hujiao" style="width:50%;float: right;text-align: center;">
+					<img style="width: 60%;margin-left: 5%;" src="../images/zxzx/05-3.png" />
+					<div>
+						<span>
+							一键呼叫
+						</span>
+						<p>
+							紧急情况呼叫
+						</p>
+					</div>
+				</div>
+				<div style="margin-top: 50%;width: 100%;text-align: center;">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a id="tixing" href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="../images/zxzx/05_04.jpg">
+								<div class="mui-media-body" style="padding-top: 5%;">
+									扫码设置用药提醒
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a id="tese" href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="../images/zxzx/05_07.jpg">
+								<div class="mui-media-body" style="padding-top: 5%;">
+									社区特色服务
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</body>
 	<script src="../js/mui.min.js"></script>
 	<script>
 		mui.init({
-			swipeBack:true //启用右滑关闭功能
+			swipeBack: true //启用右滑关闭功能
 		});
+		mui.plusReady(function(){
+			zixun();
+			hujiao();
+		});
+		function zixun(){
+			document.getElementById("zixun").addEventListener('tap',function(){
+				mui.openWindow({
+					id:'zixun',
+					url:'guide.html'
+				})
+			});
+		}
+		function hujiao(){
+			document.getElementById("hujiao").addEventListener('tap',function(){
+				plus.device.dial('1234',false);
+			});
+		}
+		function tixing(){
+			document.getElementById("tixing").addEventListener('tap',function(){
+				
+			});
+		}
+		function tese(){
+			document.getElementById("tese").addEventListener('tap',function(){
+				
+			});
+		}
 	</script>
+
 </html>
