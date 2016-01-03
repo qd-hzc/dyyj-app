@@ -272,7 +272,8 @@
 					"css/mui.min.css",
 					"page/setting.html",
 					"page/aijiaren.html",
-					"libs/easymob-webim-sdk/jquery-1.11.1.js"
+					"libs/easymob-webim-sdk/jquery-1.11.1.js",
+					"page/news.html"
 				],
 				"refer": [
 					"page/addPerson.html"
@@ -344,6 +345,44 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/news.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"images/newImg/2.8.jpg",
+					"images/newImg/2.4.jpg",
+					"images/newImg/3.3.jpg",
+					"images/newImg/1.8.jpg",
+					"images/newImg/2.9.jpg",
+					"images/newImg/1.5.jpg",
+					"images/newImg/3.9.jpg",
+					"images/newImg/1.2.jpg",
+					"images/newImg/2.5.jpg",
+					"images/newImg/3.1.jpg",
+					"images/newImg/1.7.jpg",
+					"images/newImg/1.1.jpg",
+					"images/newImg/1.10.jpg",
+					"images/newImg/2.1.jpg",
+					"images/newImg/3.7.jpg",
+					"images/newImg/2.10.jpg",
+					"images/newImg/3.4.jpg",
+					"images/newImg/1.9.jpg",
+					"images/newImg/2.6.jpg",
+					"images/newImg/3.6.jpg",
+					"images/newImg/3.10.jpg",
+					"images/newImg/1.3.png",
+					"images/newImg/1.4.jpg",
+					"images/newImg/2.7.jpg",
+					"images/newImg/3.5.jpg",
+					"images/newImg/3.8.jpg",
+					"images/newImg/1.6.jpg",
+					"images/newImg/2.2.jpg",
+					"images/newImg/2.3.jpg",
+					"images/newImg/3.2.jpg"
 				],
 				"refer": [],
 				"priority": 0
