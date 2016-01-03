@@ -42,7 +42,7 @@
 		</nav>
 		<script src="../js/mui.min.js"></script>
 		<script type="text/javascript" charset="utf-8">
-			 //mui初始化
+			//mui初始化
 			mui.init();
 			var subpages = [
 			'tab-webview-subpage-about.html', 
@@ -71,6 +71,20 @@
 					}
 					self.append(sub);
 				}
+				
+				var backButtonPress = 0;
+					mui.back = function(event) {
+						backButtonPress++;
+						if (backButtonPress > 1) {
+							plus.runtime.quit();
+						} else {
+							plus.nativeUI.toast('再按一次退出应用');
+						}
+						setTimeout(function() {
+							backButtonPress = 0;
+						}, 1000);
+						return false;
+					};
 			});
 			 //当前激活选项
 			var activeTab = subpages[0];
