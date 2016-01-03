@@ -282,7 +282,8 @@
 				],
 				"refer": [
 					"login.html",
-					"page/guide.html"
+					"page/guide.html",
+					"page/main.html"
 				],
 				"priority": 0
 			},

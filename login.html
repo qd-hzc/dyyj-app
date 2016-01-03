@@ -124,6 +124,7 @@
 						"url": 'page/main.html'
 					});
 					var toMain = function() {
+						window.localStorage.setItem("denglu","1");
 						$.fire(mainPage, 'show', null);
 						setTimeout(function() {
 							$.openWindow({

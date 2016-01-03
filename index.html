@@ -31,7 +31,7 @@
 				var appVersion = plus.runtime.version;
 				var av = window.localStorage.getItem("appVersion");
 				window.localStorage.setItem("appVersion", appVersion);
-				if (false && av && av == appVersion) { //没有版本更新，也不是第一次安装
+				if (av && av == appVersion) { //没有版本更新，也不是第一次安装
 					if (window.localStorage.getItem("denglu") == "1") {
 						mui.openWindow({
 							id: 'main-win',
