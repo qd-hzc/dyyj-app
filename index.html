@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>版本升级</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style>
+			.body {
+				background-image: url(images/04_01.jpg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!--
+	    	时间：2015-04-25
+	    	描述：
+	    -->
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+			mui.plusReady(function() {
+				checkVersion();
+			});
+
+			function checkVersion() {
+				var appVersion = plus.runtime.version;
+				var av = window.localStorage.getItem("appVersion");
+				window.localStorage.setItem("appVersion", appVersion);
+				if (av && av == appVersion) { //没有版本更新，也不是第一次安装
+					if (window.localStorage.getItem("denglu") == "1") {
+						mui.openWindow({
+							id: 'main-win',
+							url: 'page/main.html',
+							show: {
+								duration: 200
+							}
+						});
+					} else {
+						mui.openWindow({
+							id: 'login-win',
+							url: 'login.html',
+							show: {
+								duration: 200
+							}
+						});
+					}
+				} else { //app第一次安装或app升级了
+					mui.openWindow({
+						id: 'image-win',
+						url: 'page/guide.html',
+						show: {
+							duration: 200
+						}
+					});
+				}
+			}
+		</script>
+	</body>
+
+</html>

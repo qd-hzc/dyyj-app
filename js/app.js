@@ -127,22 +127,22 @@
 						"url": 'setting.html'
 					});
 					//设置
-					var settingButton = doc.getElementById('setting');
-					//settingButton.style.display = settings.autoLogin ? 'block' : 'none';
-					settingButton.addEventListener('tap', function(event) {
-						$.openWindow({
-							id: 'setting',
-							show: {
-								aniShow: 'pop-in'
-							},
-							styles: {
-								popGesture: 'hide'
-							},
-							waiting: {
-								autoShow: false
-							}
-						});
-					});
+//					var settingButton = doc.getElementById('setting');
+//					//settingButton.style.display = settings.autoLogin ? 'block' : 'none';
+//					settingButton.addEventListener('tap', function(event) {
+//						$.openWindow({
+//							id: 'setting',
+//							show: {
+//								aniShow: 'pop-in'
+//							},
+//							styles: {
+//								popGesture: 'hide'
+//							},
+//							waiting: {
+//								autoShow: false
+//							}
+//						});
+//					});
 					//--
 					$.oldBack = mui.back;
 					var backButtonPress = 0;
