@@ -267,7 +267,10 @@
 					"page/tab-webview-subpage-setting.html",
 					"page/tab-webview-subpage-contact.html",
 					"fonts/mui.ttf",
-					"page/tab-webview-subpage-chat.html"
+					"page/tab-webview-subpage-chat.html",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"page/setting.html"
 				],
 				"refer": [],
 				"priority": 0
@@ -295,6 +298,14 @@
 				"refer": [
 					"login.html"
 				],
+				"priority": 0
+			},
+			"page/setting.html": {
+				"resources": [
+					"images/settings/touxiang.jpg",
+					"images/erweima/erweima.jpg"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
