@@ -268,7 +268,9 @@
 					"page/tab-webview-subpage-setting.html",
 					"page/tab-webview-subpage-contact.html",
 					"fonts/mui.ttf",
-					"page/tab-webview-subpage-chat.html"
+					"page/tab-webview-subpage-chat.html",
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
