@@ -386,6 +386,28 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"page/tab-webview-subpage-about.html": {
+				"resources": [
+					"js/common.js",
+					"images/zxzx/05_04.jpg",
+					"images/zxzx/05-3.png",
+					"images/zxzx/05-2.png",
+					"images/zxzx/05_01.jpg",
+					"images/zxzx/05_07.jpg"
+				],
+				"refer": [
+					"page/guide.html",
+					"page/barcode_scan.html"
+				],
+				"priority": 0
+			},
+			"page/barcode_scan.html": {
+				"resources": [
+					"css/common.css"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {

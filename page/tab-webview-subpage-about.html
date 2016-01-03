@@ -75,35 +75,45 @@
 		</div>
 	</body>
 	<script src="../js/mui.min.js"></script>
+	<script src="../js/common.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		mui.init({
 			swipeBack: true //启用右滑关闭功能
 		});
-		mui.plusReady(function(){
+		mui.plusReady(function() {
 			zixun();
 			hujiao();
+			tixing();
 		});
-		function zixun(){
-			document.getElementById("zixun").addEventListener('tap',function(){
+
+		function zixun() {
+			document.getElementById("zixun").addEventListener('tap', function() {
 				mui.openWindow({
-					id:'zixun',
-					url:'guide.html'
+					id: 'zixun',
+					url: 'guide.html'
 				})
 			});
 		}
-		function hujiao(){
-			document.getElementById("hujiao").addEventListener('tap',function(){
-				plus.device.dial('1234',false);
+
+		function hujiao() {
+			document.getElementById("hujiao").addEventListener('tap', function() {
+				plus.device.dial('053268850806', false);
 			});
 		}
-		function tixing(){
-			document.getElementById("tixing").addEventListener('tap',function(){
-				
+
+		function tixing() {
+			document.getElementById("tixing").addEventListener('tap', function() {
+				var id = 'barcode_scan.html';
+				clicked(id,true,true);
+//				mui.openWindow({
+//					id: 'barcode-win',
+//					url: 'barcode_scan.html'
+//				});
 			});
 		}
-		function tese(){
-			document.getElementById("tese").addEventListener('tap',function(){
-				
+
+		function tese() {
+			document.getElementById("tese").addEventListener('tap', function() {
 			});
 		}
 	</script>
