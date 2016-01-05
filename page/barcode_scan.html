@@ -7,6 +7,7 @@
 		<meta name="HandheldFriendly" content="true" />
 		<meta name="MobileOptimized" content="320" />
 		<title>Hello H5+</title>
+		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="../js/common.js"></script>
 		<script type="text/javascript">
 			var ws = null,
@@ -33,17 +34,20 @@
 				});
 				// 显示页面并关闭等待框
 				ws.show("pop-in");
-//				wo.evalJS("closeWaiting()");
+//				wo.evalJS("closeWaiting(s)");
 			}
 			if (window.plus) {
 				plusReady();
 			} else {
-				document.addEventListener("plusready", plusReady, false);
+				mui.plusReady(function(){
+					plusReady();
+				})
+//				document.addEventListener("plusready", plusReady, false);
 			}
 			// 监听DOMContentLoaded事件
 			document.addEventListener("DOMContentLoaded", function() {
 				domready = true;
-				plusReady();
+//				plusReady();
 			}, false);
 			// 二维码扫描成功
 			function onmarked(type, result, file) {
