@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>ECahrt 示例</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<style>
+			.chart {
+				height: 200px;
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			h5 {
+				margin-top: 30px;
+				font-weight: bold;
+			}
+			
+			h5:first-child {
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">血糖监测</h1>
+			<a id="xtAdd" class="mui-icon mui-pull-right" style="font-size: 16px;padding-top: 14px;" data-url="xtjc.html">新增</a>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+				<h5>总计</h5>
+				<div class="chart" id="pieChart"></div>
+				<h5>走势图</h5>
+				<div class="chart" id="lineChart"></div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../libs/echarts-all.js"></script>
+		<script>
+			document.getElementById("xtAdd").addEventListener('tap', function() {
+				var url = this.getAttribute('data-url');
+				mui.openWindow({
+					url: url
+				});
+			});
+			var getOption = function(chartType) {
+				var chartOption = chartType == 'pie' ? {
+					calculable: false,
+					series: [{
+						name: '访问来源',
+						type: 'pie',
+						radius: '65%',
+						center: ['50%', '50%'],
+						data: [{
+							value: 335,
+							name: '偏高（20%）'
+						}, {
+							value: 200,
+							name: '偏低（13%）'
+						}, {
+							value: 1548,
+							name: '正常（67%）'
+						}]
+					}]
+				} : {
+					legend: {
+						data: ['血糖走势']
+					},
+					grid: {
+						x: 35,
+						y: 30,
+					},
+					toolbox: {
+						show: false,
+						feature: {
+							mark: {
+								show: true
+							},
+							dataView: {
+								show: true,
+								readOnly: false
+							},
+							magicType: {
+								show: true,
+								type: ['line', 'bar']
+							},
+							restore: {
+								show: true
+							},
+							saveAsImage: {
+								show: true
+							}
+						}
+					},
+					calculable: false,
+					xAxis: [{
+						type: 'category',
+						data: ['9-28', '10-3', '10-10', '10-17', '10-24', '11-1', '11-8', '11-15', '11-23', '11-30', '12-6', '12-13']
+					}],
+					yAxis: [{
+						type: 'value',
+						splitArea: {
+							show: true
+						}
+					}],
+					series: [{
+						name: '血糖走势',
+						type: chartType,
+						data: [43.0, 34.9, 47.0, 33.2, 45.6, 56.7, 55.6, 62.2, 32.6, 40.0, 36.4, 53.3]
+					}]
+				};
+				return chartOption;
+			};
+			var byId = function(id) {
+				return document.getElementById(id);
+			};
+			var lineChart = echarts.init(byId('lineChart'));
+			lineChart.setOption(getOption('line'));
+			var pieChart = echarts.init(byId('pieChart'));
+			pieChart.setOption(getOption('pie'));
+			byId("echarts").addEventListener('tap', function() {
+				var url = this.getAttribute('data-url');
+				plus.runtime.openURL(url);
+			}, false);
+		</script>
+	</body>
+
+</html>

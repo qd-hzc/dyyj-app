@@ -320,7 +320,9 @@
 					"page/settings/wddjj.html",
 					"page/settings/choujiang.html",
 					"page/aijiaren/fuxm.html",
-					"login.html"
+					"login.html",
+					"reg.html",
+					"updatepasswd.html"
 				],
 				"priority": 0
 			},
@@ -355,7 +357,11 @@
 					"page/health-file.html",
 					"page/remind-drug-list.html",
 					"page/aijiaren/fuxm.html",
-					"page/remind-drug.html"
+					"page/remind-drug.html",
+					"page/aijiaren/xtjc.html",
+					"page/aijiaren/xyjc.html",
+					"page/aijiaren/xtchart.html",
+					"page/aijiaren/xychart.html"
 				],
 				"priority": 0
 			},
@@ -565,7 +571,8 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/app.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -701,6 +708,65 @@
 					"libs/choujiang/css/choujiang.css"
 				],
 				"refer": [],
+				"priority": 0
+			},
+			"page/aijiaren/xtjc.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"css/mui.picker.min.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/aijiaren/xyjc.html": {
+				"resources": [
+					"js/mui.picker.min.js",
+					"css/mui.picker.min.css",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/aijiaren/xtchart.html": {
+				"resources": [
+					"libs/echarts-all.js",
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"page/aijiaren/xtjc.html"
+				],
+				"priority": 0
+			},
+			"page/aijiaren/xychart.html": {
+				"resources": [
+					"libs/echarts-all.js"
+				],
+				"refer": [
+					"page/aijiaren/xyjc.html"
+				],
+				"priority": 0
+			},
+			"updatepasswd.html": {
+				"resources": [
+					"js/app.js",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"css/style.css"
+				],
+				"refer": [
+					"page/main.html"
+				],
 				"priority": 0
 			}
 		},
