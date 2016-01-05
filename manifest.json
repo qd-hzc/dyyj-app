@@ -316,7 +316,11 @@
 				"refer": [
 					"page/settings/bdsbk.html",
 					"page/settings/jfdh.html",
-					"page/set.html"
+					"page/set.html",
+					"page/settings/wddjj.html",
+					"page/settings/choujiang.html",
+					"page/aijiaren/fuxm.html",
+					"login.html"
 				],
 				"priority": 0
 			},
@@ -346,19 +350,12 @@
 					"css/app.css"
 				],
 				"refer": [
-<<<<<<< HEAD
 					"page/remind-drug.html",
 					"page/tab-webview-subpage-contact.html",
 					"page/health-file.html",
-					"page/remind-drug-list.html"
-=======
-<<<<<<< HEAD
-					"page/health-file.html",
-					"page/aijiaren/fuxm.html"
-=======
+					"page/remind-drug-list.html",
+					"page/aijiaren/fuxm.html",
 					"page/remind-drug.html"
->>>>>>> branch 'master' of git@github.com:qd-hzc/dyyj-app.git
->>>>>>> 48c663de2eaa15f9f0ca4046c8059408cc1d91e0
 				],
 				"priority": 0
 			},
@@ -434,7 +431,9 @@
 			},
 			"page/barcode_scan.html": {
 				"resources": [
-					"css/common.css"
+					"css/common.css",
+					"js/common.js",
+					"js/mui.min.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -482,7 +481,8 @@
 				"resources": [
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"js/mui.min.js"
+					"js/mui.min.js",
+					"css/app.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -491,7 +491,8 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/app.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -508,13 +509,11 @@
 					"css/mui.min.css"
 				],
 				"refer": [
-<<<<<<< HEAD
 					"page/tab-webview-subpage-contact.html",
 					"page/news.html",
 					"page/newsWithTitle.html",
 					"page/barcode_scan.html",
-					"page/news-with-title.html"
-=======
+					"page/news-with-title.html",
 					"page/news.html",
 					"page/zixun.html"
 				],
@@ -530,7 +529,6 @@
 					"js/mui.imageViewer.js",
 					"js/arttmpl.js",
 					"images/user-photo.png"
->>>>>>> 48c663de2eaa15f9f0ca4046c8059408cc1d91e0
 				],
 				"priority": 0
 			},
@@ -538,7 +536,8 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"css/app.css"
 				],
 				"refer": [],
 				"priority": 0
@@ -556,7 +555,8 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/shequ.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -623,7 +623,42 @@
 				"priority": 0
 			},
 			"page/news-with-title.html": {
-				"resources": [],
+				"resources": [
+					"images/newImg/2.8.jpg",
+					"images/newImg/3.3.jpg",
+					"images/newImg/2.4.jpg",
+					"images/newImg/1.8.jpg",
+					"images/newImg/2.9.jpg",
+					"images/newImg/1.5.jpg",
+					"images/newImg/3.9.jpg",
+					"images/newImg/1.2.jpg",
+					"images/newImg/2.5.jpg",
+					"images/newImg/3.1.jpg",
+					"images/newImg/1.7.jpg",
+					"images/newImg/1.1.jpg",
+					"images/newImg/1.10.jpg",
+					"js/mui.min.js",
+					"images/newImg/2.1.jpg",
+					"images/newImg/3.7.jpg",
+					"images/newImg/3.4.jpg",
+					"images/newImg/2.10.jpg",
+					"images/newImg/1.9.jpg",
+					"images/newImg/2.6.jpg",
+					"images/newImg/3.6.jpg",
+					"fonts/mui.ttf",
+					"images/newImg/3.10.jpg",
+					"images/newImg/1.3.png",
+					"images/newImg/1.4.jpg",
+					"images/newImg/2.7.jpg",
+					"images/newImg/3.5.jpg",
+					"images/newImg/3.8.jpg",
+					"css/app.css",
+					"images/newImg/1.6.jpg",
+					"css/mui.min.css",
+					"images/newImg/2.2.jpg",
+					"images/newImg/2.3.jpg",
+					"images/newImg/3.2.jpg"
+				],
 				"refer": [
 					"page/news-detial.html"
 				],
@@ -633,11 +668,39 @@
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/aijiaren/yyjl.jpg"
 				],
 				"refer": [
 					"page/remind-drug.html"
 				],
+				"priority": 0
+			},
+			"page/settings/wddjj.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/app.css",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/settings/choujiang.html": {
+				"resources": [
+					"libs/choujiang/js/awardRotate.js",
+					"libs/choujiang/images/turntable.png",
+					"js/mui.min.js",
+					"libs/choujiang/images/pointer.png",
+					"css/mui.min.css",
+					"libs/choujiang/js/jquery.min.js",
+					"fonts/mui.ttf",
+					"libs/choujiang/images/turntable-bg.jpg",
+					"libs/choujiang/css/demo.css",
+					"page/settings/choujiang.css",
+					"libs/choujiang/css/choujiang.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
