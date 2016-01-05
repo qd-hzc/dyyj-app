@@ -342,13 +342,23 @@
 					"images/aijiaren/yyjl.jpg",
 					"images/aijiaren/tsfw.jpg",
 					"images/aijiaren/xtjc.jpg",
-					"images/aijiaren/xyjc.jpg"
+					"images/aijiaren/xyjc.jpg",
+					"css/app.css"
 				],
 				"refer": [
+<<<<<<< HEAD
 					"page/remind-drug.html",
 					"page/tab-webview-subpage-contact.html",
 					"page/health-file.html",
 					"page/remind-drug-list.html"
+=======
+<<<<<<< HEAD
+					"page/health-file.html",
+					"page/aijiaren/fuxm.html"
+=======
+					"page/remind-drug.html"
+>>>>>>> branch 'master' of git@github.com:qd-hzc/dyyj-app.git
+>>>>>>> 48c663de2eaa15f9f0ca4046c8059408cc1d91e0
 				],
 				"priority": 0
 			},
@@ -394,7 +404,8 @@
 					"images/newImg/1.6.jpg",
 					"images/newImg/2.2.jpg",
 					"images/newImg/2.3.jpg",
-					"images/newImg/3.2.jpg"
+					"images/newImg/3.2.jpg",
+					"css/app.css"
 				],
 				"refer": [
 					"page/tab-with-segmented-control.html",
@@ -497,15 +508,51 @@
 					"css/mui.min.css"
 				],
 				"refer": [
+<<<<<<< HEAD
 					"page/tab-webview-subpage-contact.html",
 					"page/news.html",
 					"page/newsWithTitle.html",
 					"page/barcode_scan.html",
 					"page/news-with-title.html"
+=======
+					"page/news.html",
+					"page/zixun.html"
+				],
+				"priority": 0
+			},
+			"page/zixun.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/app.css",
+					"css/mui.imageviewer.css",
+					"js/mui.imageViewer.js",
+					"js/arttmpl.js",
+					"images/user-photo.png"
+>>>>>>> 48c663de2eaa15f9f0ca4046c8059408cc1d91e0
 				],
 				"priority": 0
 			},
 			"page/set.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/health-file.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/aijiaren/fuxm.html": {
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
@@ -602,7 +649,6 @@
 				"libs/easymob-webim-sdk/quickstart.md",
 				"images/weixin.png",
 				"images/qq.png",
-				"images/user-photo.png",
 				"README.md"
 			]
 		}
