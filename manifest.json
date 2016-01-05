@@ -3,7 +3,7 @@
     "id": "H5FA5040E",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "大云益健",/*应用名称，程序桌面图标名称*/
     "version": {
-        "name": "1.0.0",/*应用版本名称*/
+        "name": "1.0.1",/*应用版本名称*/
         "code": "83"
     },
     "description": "",/*应用描述信息*/
@@ -101,7 +101,7 @@
         },
         "Navigator":{
         	"description": "浏览器信息"
-        },"Push":{},"OAuth":{},"Share":{},"Payment":{},"Statistic":{},"NativeObj":{}
+        },"NativeObj":{}
     },
     "plus": {
         "splashscreen": {
@@ -125,7 +125,7 @@
                 "keystore": "",/*Android应用打包使用的密钥库文件*/
                 "password": "",/*Android应用打包使用密钥库中证书的密码*/
                 "aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-                "permissions": ["<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"]/*使用Native.js调用原生安卓API需要使用到的系统权限*/
+                "permissions": ["<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>"]/*使用Native.js调用原生安卓API需要使用到的系统权限*/
             },
             "orientation": [
             "portrait-primary",

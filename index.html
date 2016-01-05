@@ -24,7 +24,26 @@
 		<script type="text/javascript" charset="utf-8">
 			mui.init();
 			mui.plusReady(function() {
-				checkVersion();
+				//				checkVersion();
+				var isFirstInstall = window.localStorage.getItem("isFirstInstall");
+				if (isFirstInstall == "1") {
+					mui.openWindow({
+							id: 'login-win',
+							url: 'login.html',
+							show: {
+								duration: 200
+							}
+						});
+				} else {
+					mui.openWindow({
+						id: 'image-win',
+						url: 'page/guide.html',
+						show: {
+							duration: 200
+						}
+					});
+					window.localStorage.setItem("isFirstInstall", "1");
+				}
 			});
 
 			function checkVersion() {
