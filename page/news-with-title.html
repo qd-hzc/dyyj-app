@@ -24,21 +24,25 @@
 	</head>
 
 	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">咨询</h1>
+		</header>
 		<div class="mui-content">
 			<div style="padding: 10px 10px;" id="slider" class="mui-slider">
 				<div id="segmentedControl" class="mui-segmented-control">
 					<a class="mui-control-item mui-active" href="#item1">
-				养老政策
-			</a>
+						养老政策
+					</a>
 					<a class="mui-control-item" href="#item2">
-				保健知识
-			</a>
+						保健知识
+					</a>
 					<a class="mui-control-item" href="#item3">
-				慢病管理
-			</a>
+						慢病管理
+					</a>
 					<a class="mui-control-item" href="#item4">
-				漫友分享
-			</a>
+						漫友分享
+					</a>
 				</div>
 			</div>
 			<div>
@@ -392,7 +396,6 @@
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			});
-			 
 			(function($) {
 				$('.mui-scroll-wrapper').scroll({
 					indicators: true //是否显示滚动条
@@ -424,10 +427,10 @@
 						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
 					}
 				});
-				$('.mui-table-view-cell').on('tap','a',function(){
+				$('.mui-table-view-cell').on('tap', 'a', function() {
 					$.openWindow({
-						id:'news-detial',
-						url:'news-detial.html'
+						id: 'news-detial-win',
+						url: 'news-detial.html'
 					})
 				})
 			})(mui);

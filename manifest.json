@@ -346,8 +346,12 @@
 					"css/app.css"
 				],
 				"refer": [
+<<<<<<< HEAD
 					"page/health-file.html",
 					"page/aijiaren/fuxm.html"
+=======
+					"page/remind-drug.html"
+>>>>>>> branch 'master' of git@github.com:qd-hzc/dyyj-app.git
 				],
 				"priority": 0
 			},
@@ -534,6 +538,15 @@
 				"priority": 0
 			},
 			"page/aijiaren/fuxm.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/remind-drug.html": {
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
