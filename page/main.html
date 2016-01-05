@@ -21,10 +21,10 @@
 
 		<header class="mui-bar mui-bar-nav">
 			<a id="addPerson" class="mui-icon mui-icon-plusempty mui-pull-right" style="color: #999;display: none;" data-href="addPerson.html"></a>
-			<h1 id="title" class="mui-title">首页</h1>
+			<h1 id="title" class="mui-title">在线咨询</h1>
 		</header>
 		<nav class="mui-bar mui-bar-tab">
-			<a id="defaultTab" class="mui-tab-item mui-active" href="tab-webview-subpage-about.html">
+			<a id="defaultTab" class="mui-tab-item mui-active" href="online-counsel.html">
 				<span class="mui-icon mui-icon-chatbubble"></span>
 				<span class="mui-tab-label">在线咨询</span>
 			</a>
@@ -47,7 +47,7 @@
 			//mui初始化
 			mui.init();
 			var subpages = [
-				'tab-webview-subpage-about.html',
+				'online-counsel.html',
 				'aijiaren.html',
 				'news.html',
 				'setting.html'
@@ -71,19 +71,6 @@
 					}
 					self.append(sub);
 				}
-				var backButtonPress = 0;
-				mui.back = function(event) {
-					backButtonPress++;
-					if (backButtonPress > 1) {
-						plus.runtime.quit();
-					} else {
-						plus.nativeUI.toast('再按一次退出应用');
-					}
-					setTimeout(function() {
-						backButtonPress = 0;
-					}, 1000);
-					return false;
-				};
 			});
 			//当前激活选项
 			var activeTab = subpages[0];
@@ -103,8 +90,7 @@
 				}
 				//更换标题
 				title.innerHTML = this.querySelector('.mui-tab-label').innerHTML;
-				if(title.innerHTML != ''){
-					
+				if (title.innerHTML != '') {
 				}
 				//显示目标选项卡
 				//若为iOS平台或非首次显示，则直接显示
@@ -134,14 +120,26 @@
 					defaultTab.classList.add('mui-active');
 				}
 			});
-			
-			document.getElementById("addPerson").addEventListener('tap',function(){
-				var href= this.getAttribute('data-href');
+			document.getElementById("addPerson").addEventListener('tap', function() {
+				var href = this.getAttribute('data-href');
 				mui.openWindow({
-					id:'addPersonWin',
-					url:href
+					id: 'addPersonWin',
+					url: href
 				});
 			});
+			var backButtonPress = 0;
+			mui.back = function(event) {
+				backButtonPress++;
+				if (backButtonPress > 1) {
+					plus.runtime.quit();
+				} else {
+					plus.nativeUI.toast('再按一次退出应用');
+				}
+				setTimeout(function() {
+					backButtonPress = 0;
+				}, 1000);
+				return false;
+			};
 		</script>
 	</body>
 
