@@ -388,7 +388,8 @@
 					"images/newImg/1.6.jpg",
 					"images/newImg/2.2.jpg",
 					"images/newImg/2.3.jpg",
-					"images/newImg/3.2.jpg"
+					"images/newImg/3.2.jpg",
+					"css/app.css"
 				],
 				"refer": [
 					"page/tab-with-segmented-control.html",
@@ -485,7 +486,26 @@
 					"images/zxzx/05-3.png",
 					"images/zxzx/05-2.png",
 					"images/zxzx/05_01.jpg",
-					"images/zxzx/05_07.jpg"
+					"images/zxzx/05_07.jpg",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [
+					"page/news.html",
+					"page/zixun.html"
+				],
+				"priority": 0
+			},
+			"page/zixun.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"css/app.css",
+					"css/mui.imageviewer.css",
+					"js/mui.imageViewer.js",
+					"js/arttmpl.js",
+					"images/user-photo.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -499,7 +519,6 @@
 				"libs/easymob-webim-sdk/quickstart.md",
 				"images/weixin.png",
 				"images/qq.png",
-				"images/user-photo.png",
 				"README.md"
 			]
 		}
