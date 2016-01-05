@@ -424,6 +424,12 @@
 						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
 					}
 				});
+				$('.mui-table-view-cell').on('tap','a',function(){
+					$.openWindow({
+						id:'tab-with-segmented-contact',
+						url:'tab-webview-subpage-contact.html'
+					})
+				})
 			})(mui);
 		</script>
 

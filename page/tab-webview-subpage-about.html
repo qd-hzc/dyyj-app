@@ -32,7 +32,7 @@
 				<div id="zixun" style=" width: 50%;float: left;text-align: center;">
 					<img style="width: 60%;" src="../images/zxzx/05-2.png" />
 					<div>
-						<span>
+						<span >
 							资讯
 						</span>
 						<p>
@@ -84,13 +84,14 @@
 			zixun();
 			hujiao();
 			tixing();
+			tese();
 		});
 
 		function zixun() {
 			document.getElementById("zixun").addEventListener('tap', function() {
 				mui.openWindow({
 					id: 'zixun',
-					url: 'guide.html'
+					url: 'news.html'
 				})
 			});
 		}
@@ -114,6 +115,10 @@
 
 		function tese() {
 			document.getElementById("tese").addEventListener('tap', function() {
+					mui.openWindow({
+						id:'tab-with-segmented-contact',
+						url:'tab-webview-subpage-contact.html'
+					})
 			});
 		}
 	</script>

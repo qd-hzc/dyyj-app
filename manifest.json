@@ -1,7 +1,7 @@
 {
     "@platforms": ["android", "iPhone", "iPad"],
     "id": "H5FA5040E",/*应用的标识，创建应用时自动生成，勿手动修改*/
-    "name": "DyyjAPP",/*应用名称，程序桌面图标名称*/
+    "name": "大云益健",/*应用名称，程序桌面图标名称*/
     "version": {
         "name": "1.0.0",/*应用版本名称*/
         "code": "83"
@@ -139,34 +139,34 @@
                     "prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
                     "auto": "", /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
                     "iphone": {
-                        "normal": "",/*iPhone普通屏幕程序图标，分辨率：57x57*/
-                        "retina": "",/*iPhone高分屏程序图标，分辨率：114x114*/
-                        "retina7": "",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
-                        "spotlight-normal": "", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
-                        "spotlight-retina": "", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
-                        "spotlight-retina7": "",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-                        "settings-normal": "", /*iPhone设置页面程序图标，分辨率：29x29*/
-                        "settings-retina": ""/*iPhone 高分屏设置页面程序图标，分辨率：58x58*/
+                        "normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
+                        "retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
+                        "retina7": "unpackage/res/icons/120x120.png",/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+                        "spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
+                        "spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "unpackage/res/icons/58x58.png","retina8":"unpackage/res/icons/180x180.png","settings-retina8":"unpackage/res/icons/87x87.png"/*iPhone 高分屏设置页面程序图标，分辨率：58x58*/
                     },
                     "ipad": {
-                        "normal": "", /*iPad普通屏幕程序图标，分辨率：72x72*/
-                        "retina": "", /*iPad高分屏程序图标，分辨率：144x144*/
-                        "normal7": "", /*iPad iOS7程序图标，分辨率：76x76*/
-                        "retina7": "", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
-                        "spotlight-normal": "", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
-                        "spotlight-retina": "", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
-                        "spotlight-normal7": "",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
-                        "spotlight-retina7": "",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-                        "settings-normal": "",/*iPad设置页面程序图标，分辨率：29x29*/
-                        "settings-retina": "" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
+                        "normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
+                        "normal7": "unpackage/res/icons/76x76.png", /*iPad iOS7程序图标，分辨率：76x76*/
+                        "retina7": "unpackage/res/icons/152x152.png", /*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
+                        "spotlight-normal7": "unpackage/res/icons/40x40.png",/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
+                        "spotlight-retina7": "unpackage/res/icons/80x80.png",/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal": "unpackage/res/icons/29x29.png",/*iPad设置页面程序图标，分辨率：29x29*/
+                        "settings-retina": "unpackage/res/icons/58x58.png" /*iPad高分屏设置页面程序图标，分辨率：58x58*/
                     }
                 },
                 "android": {
-                    "mdpi": "", /*普通屏程序图标，分辨率：48x48*/
-                    "ldpi": "", /*大屏程序图标，分辨率：48x48*/
-                    "hdpi": "", /*高分屏程序图标，分辨率：72x72*/
-                    "xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
-                    "xxhdpi": ""/*1080P 高分屏程序图标，分辨率：144x144*/
+                    "mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi": "unpackage/res/icons/144x144.png"/*1080P 高分屏程序图标，分辨率：144x144*/
                 }
             },
             "splashscreen": {
@@ -188,11 +188,11 @@
                     }
                 },
                 "android": {
-                    "mdpi": "", /*普通屏启动图片，分辨率：240x282*/
-                    "ldpi": "", /*大屏启动图片，分辨率：320x442*/
-                    "hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-                    "xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
-                    "xxhdpi": ""/*1080P高分屏启动图片，分辨率：1080x1882*/
+                    "mdpi": "C:/Users/FY/Documents/Tencent Files/1052921694/FileRecv/启动图片类型/1.png", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi": "C:/Users/FY/Documents/Tencent Files/1052921694/FileRecv/启动图片类型/2.png", /*大屏启动图片，分辨率：320x442*/
+                    "hdpi": "C:/Users/FY/Documents/Tencent Files/1052921694/FileRecv/启动图片类型/3.png", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi": "C:/Users/FY/Documents/Tencent Files/1052921694/FileRecv/启动图片类型/4.png", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi": "C:/Users/FY/Documents/Tencent Files/1052921694/FileRecv/启动图片类型/5.png"/*1080P高分屏启动图片，分辨率：1080x1882*/
                 }
             }
         }
@@ -319,7 +319,10 @@
 			"page/tab-webview-subpage-contact.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/shequ.png",
+					"images/luxin.png",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0
@@ -384,7 +387,10 @@
 					"images/newImg/2.3.jpg",
 					"images/newImg/3.2.jpg"
 				],
-				"refer": [],
+				"refer": [
+					"page/tab-with-segmented-control.html",
+					"page/tab-webview-subpage-contact.html"
+				],
 				"priority": 0
 			},
 			"page/tab-webview-subpage-about.html": {
@@ -394,17 +400,59 @@
 					"images/zxzx/05-3.png",
 					"images/zxzx/05-2.png",
 					"images/zxzx/05_01.jpg",
-					"images/zxzx/05_07.jpg"
+					"images/zxzx/05_07.jpg",
+					"js/mui.min.js",
+					"css/mui.min.css"
 				],
 				"refer": [
 					"page/guide.html",
-					"page/barcode_scan.html"
+					"page/barcode_scan.html",
+					"page/tab-webview-subpage-contact.html"
 				],
 				"priority": 0
 			},
 			"page/barcode_scan.html": {
 				"resources": [
 					"css/common.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/tab-with-segmented-control.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"images/newImg/2.8.jpg",
+					"images/newImg/3.3.jpg",
+					"images/newImg/2.4.jpg",
+					"images/newImg/1.8.jpg",
+					"images/newImg/2.9.jpg",
+					"images/newImg/1.5.jpg",
+					"images/newImg/3.9.jpg",
+					"images/newImg/1.2.jpg",
+					"images/newImg/2.5.jpg",
+					"images/newImg/3.1.jpg",
+					"images/newImg/1.7.jpg",
+					"images/newImg/1.1.jpg",
+					"images/newImg/1.10.jpg",
+					"js/mui.min.js",
+					"images/newImg/2.1.jpg",
+					"images/newImg/3.7.jpg",
+					"images/newImg/3.4.jpg",
+					"images/newImg/2.10.jpg",
+					"images/newImg/1.9.jpg",
+					"images/newImg/2.6.jpg",
+					"images/newImg/3.6.jpg",
+					"images/newImg/3.10.jpg",
+					"images/newImg/1.3.png",
+					"images/newImg/1.4.jpg",
+					"images/newImg/2.7.jpg",
+					"images/newImg/3.5.jpg",
+					"images/newImg/3.8.jpg",
+					"images/newImg/1.6.jpg",
+					"css/mui.min.css",
+					"images/newImg/2.2.jpg",
+					"images/newImg/2.3.jpg",
+					"images/newImg/3.2.jpg"
 				],
 				"refer": [],
 				"priority": 0
