@@ -342,9 +342,13 @@
 					"images/aijiaren/yyjl.jpg",
 					"images/aijiaren/tsfw.jpg",
 					"images/aijiaren/xtjc.jpg",
-					"images/aijiaren/xyjc.jpg"
+					"images/aijiaren/xyjc.jpg",
+					"css/app.css"
 				],
-				"refer": [],
+				"refer": [
+					"page/health-file.html",
+					"page/aijiaren/fuxm.html"
+				],
 				"priority": 0
 			},
 			"page/addPerson.html": {
@@ -512,6 +516,24 @@
 				"priority": 0
 			},
 			"page/set.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/health-file.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/aijiaren/fuxm.html": {
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",

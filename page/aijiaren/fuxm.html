@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<style>
+			html,
+			body {
+				background-color: #efeff4;
+			}
+			
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+			
+			.oa-contact-avatar {
+				width: 110px;
+			}
+			
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			
+			.oa-contact-content {
+				width: 100%;
+			}
+			
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			
+			.oa-contact-name,
+			oa-contact-position {
+				float: left;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 id="title" class="mui-title">特色服务</h1>
+		</header>
+
+		<div class="mui-content">
+			<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="../images/shequ.png" style="width:100px;" ; />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<span class="oa-contact-position mui-h4">拔罐</span>
+								</div>
+								<p class="oa-contact-email mui-h5">
+									首次免费
+								</p>
+								<p class="oa-contact-email mui-h6">
+									拔罐挺好的，对身体好，延年益寿，长命百岁的。 我们这里服务好，真的很好，不信你来试试吧。
+								</p>
+								<div>
+									<span class="mui-badge mui-badge-purple">活动</span>
+									<div class="mui-pull-right">
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined " onclick="return false;">付费</button>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined " style="margin-left: 3px;" onclick="return false;">咨询</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-cell">
+						<div class="oa-contact-cell mui-table">
+							<div class="oa-contact-avatar mui-table-cell">
+								<img src="../images/shequ.png" style="width:100px;" ; />
+							</div>
+							<div class="oa-contact-content mui-table-cell">
+								<div class="mui-clearfix">
+									<span class="oa-contact-position mui-h4">拔罐</span>
+								</div>
+								<p class="oa-contact-email mui-h5">
+									首次免费
+								</p>
+								<p class="oa-contact-email mui-h6">
+									拔罐挺好的，对身体好，延年益寿，长命百岁的。 我们这里服务好，真的很好，不信你来试试吧。
+								</p>
+								<div>
+									<span class="mui-badge mui-badge-success">上门服务</span>
+									<div class="mui-pull-right">
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined " onclick="return false;">付费</button>
+										<button type="button" class="mui-btn mui-btn-primary mui-btn-outlined " style="margin-left: 3px;" onclick="return false;">咨询</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+
+		</div>
+	</body>
+	<script src="../../js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+	</script>
+
+</html>
