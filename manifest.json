@@ -315,7 +315,8 @@
 				],
 				"refer": [
 					"page/settings/bdsbk.html",
-					"page/settings/jfdh.html"
+					"page/settings/jfdh.html",
+					"page/set.html"
 				],
 				"priority": 0
 			},
@@ -506,6 +507,15 @@
 					"js/mui.imageViewer.js",
 					"js/arttmpl.js",
 					"images/user-photo.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/set.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
 				],
 				"refer": [],
 				"priority": 0
