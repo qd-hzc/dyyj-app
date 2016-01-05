@@ -344,7 +344,9 @@
 					"images/aijiaren/xtjc.jpg",
 					"images/aijiaren/xyjc.jpg"
 				],
-				"refer": [],
+				"refer": [
+					"page/remind-drug.html"
+				],
 				"priority": 0
 			},
 			"page/addPerson.html": {
@@ -492,6 +494,15 @@
 				"priority": 0
 			},
 			"page/set.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/remind-drug.html": {
 				"resources": [
 					"js/mui.min.js",
 					"fonts/mui.ttf",
