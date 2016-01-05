@@ -101,7 +101,7 @@
         },
         "Navigator":{
         	"description": "浏览器信息"
-        }
+        },"Push":{},"OAuth":{},"Share":{},"Payment":{},"Statistic":{},"NativeObj":{}
     },
     "plus": {
         "splashscreen": {
@@ -125,10 +125,7 @@
                 "keystore": "",/*Android应用打包使用的密钥库文件*/
                 "password": "",/*Android应用打包使用密钥库中证书的密码*/
                 "aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-                "permissions": [
-                    "<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
-                    "<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"
-                ]/*使用Native.js调用原生安卓API需要使用到的系统权限*/
+                "permissions": ["<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>"]/*使用Native.js调用原生安卓API需要使用到的系统权限*/
             },
             "orientation": [
             "portrait-primary",
@@ -273,7 +270,8 @@
 					"page/setting.html",
 					"page/aijiaren.html",
 					"libs/easymob-webim-sdk/jquery-1.11.1.js",
-					"page/news.html"
+					"page/news.html",
+					"page/online-counsel.html"
 				],
 				"refer": [
 					"page/addPerson.html"
@@ -283,7 +281,8 @@
 			"index.html": {
 				"resources": [
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
 				"refer": [
 					"login.html",
@@ -311,9 +310,13 @@
 					"images/settings/touxiang.jpg",
 					"images/erweima/erweima.jpg",
 					"js/mui.min.js",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"fonts/mui.ttf"
 				],
-				"refer": [],
+				"refer": [
+					"page/settings/bdsbk.html",
+					"page/settings/jfdh.html"
+				],
 				"priority": 0
 			},
 			"page/tab-webview-subpage-contact.html": {
@@ -453,6 +456,36 @@
 					"images/newImg/2.2.jpg",
 					"images/newImg/2.3.jpg",
 					"images/newImg/3.2.jpg"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/settings/bdsbk.html": {
+				"resources": [
+					"fonts/mui.ttf",
+					"css/mui.min.css",
+					"js/mui.min.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/settings/jfdh.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"page/online-counsel.html": {
+				"resources": [
+					"js/common.js",
+					"images/zxzx/05_04.jpg",
+					"images/zxzx/05-3.png",
+					"images/zxzx/05-2.png",
+					"images/zxzx/05_01.jpg",
+					"images/zxzx/05_07.jpg"
 				],
 				"refer": [],
 				"priority": 0
