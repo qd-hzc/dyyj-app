@@ -20,13 +20,28 @@
 			.mui-control-content {
 				height: 500px;
 			}
+			
+			.mui-control-item {
+				border-color: #E70012 !important;
+				color: #e70012 !important;
+			}
+			
+			.mui-active {
+				color: white !important;
+				background-color: #e70012 !important;
+				border-color: #e70012 !important;
+				border-left: 1px solid #e70012 !important;
+			}
+			.mui-media-body{
+				color: black;
+			}
 		</style>
 	</head>
 
 	<body>
-		<div class="mui-content">
+		<div class="mui-content" style="background-color: white !important;">
 			<div style="padding: 10px 10px;" id="slider" class="mui-slider">
-				<div id="segmentedControl" class="mui-segmented-control">
+				<div id="segmentedControl" class="mui-segmented-control" style="border:1px solid #e70012 !important;">
 					<a class="mui-control-item mui-active" href="#item1">
 				养老政策
 			</a>
@@ -41,7 +56,7 @@
 			</a>
 				</div>
 			</div>
-			<div>
+			<div style="position: relative;left: -1px;width: 101%;">
 				<div id="item1" class="mui-control-content mui-active">
 					<div id="scroll" class="mui-scroll-wrapper">
 						<div class="mui-scroll">
@@ -392,7 +407,6 @@
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			});
-			 
 			(function($) {
 				$('.mui-scroll-wrapper').scroll({
 					indicators: true //是否显示滚动条
@@ -424,10 +438,10 @@
 						sliderProgressBar.setAttribute('style', sliderProgressBar.getAttribute('style'));
 					}
 				});
-				$('.mui-table-view-cell').on('tap','a',function(){
+				$('.mui-table-view-cell').on('tap', 'a', function() {
 					$.openWindow({
-						id:'news-detial',
-						url:'news-detial.html'
+						id: 'news-detial',
+						url: 'news-detial.html'
 					})
 				})
 			})(mui);
