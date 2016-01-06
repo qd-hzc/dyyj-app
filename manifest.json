@@ -501,7 +501,13 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"css/app.css"
+					"css/app.css",
+					"images/jifen/jifen3.png",
+					"images/jifen/jifen4.png",
+					"images/jifen/jifen5.png",
+					"images/jifen/jifen1.png",
+					"images/jifen/jifen2.png",
+					"images/jifen/jifen6.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -691,7 +697,9 @@
 					"js/mui.min.js",
 					"css/app.css",
 					"fonts/mui.ttf",
-					"css/mui.min.css"
+					"css/mui.min.css",
+					"images/daijinjuan/daijinjuan2.png",
+					"images/daijinjuan/daijinjuan1.png"
 				],
 				"refer": [],
 				"priority": 0
