@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>健康测评</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<!--App自定义的css-->
+		<style>
+			h5 {
+				margin: 5px 7px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">健康测评</h1>
+			<a class="mui-pull-right mui-icon mui-action-back" style="font-size: 0.8em;margin-top:5px;color:black;">完成</a>
+		</header>
+		<div class="mui-content" style="padding:70px 10px 10px 10px;">
+			<div class="mui-content-padded">
+				<h5 style="font-size: 1.1em;line-height: 1.1em;color: black;">您目前或曾经患过以下疾病吗？</h5>
+				<br />
+				<h5 style="line-height: 1.2em;position: relative">慢性支气管炎：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肺气肿：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin3" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin3">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin3">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肺心病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin4" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin4">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin4">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">高血压病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin5" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin5">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin5">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">冠心病或心肌梗死：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin6" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin6">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin6">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">脑卒中（脑中风）：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin7" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin7">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin7">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">糖尿病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin8" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin8">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin8">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性胃炎或溃疡病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin9" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin9">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin9">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性肠道疾病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin11" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin11">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin11">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性肝炎：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomin12" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomin12">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomin12">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肝硬化：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi1n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi1n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi1n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性肾衰竭：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi2n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi2n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi2n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">骨质疏松症：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi3n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi3n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi3n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">痛风：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi4n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi4n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi4n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肺癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi5n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi5n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi5n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">胃癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi6n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi6n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi6n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肝癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi7n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi7n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi7n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">大肠癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi8n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi8n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi8n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr />
+				
+				
+				<h5 style="font-size: 1.1em;line-height: 1.1em;top: 19px;position: relative;color: black;">您父母或兄弟姐妹患有或患过以下疾病吗？</h5>
+				<br />
+				<h5 style="line-height: 1.2em;position: relative">慢性支气管炎：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guomi9n" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guomi9n">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guomi9n">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肺气肿：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom1in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom1in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom1in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肺心病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom2in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom2in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom2in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">高血压病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom3in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom3in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom3in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">冠心病或心肌梗死：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom4in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom4in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom4in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">脑卒中（脑中风）：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom5in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom5in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom5in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">糖尿病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom6in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom6in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom6in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性胃炎或溃疡病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom7in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom7in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom7in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性肠道疾病：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom8in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom8in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom8in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性肝炎：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom9in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom9in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom9in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肝硬化：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guom0in" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guom0in">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guom0in">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">慢性肾衰竭：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guo1min" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guo1min">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guo1min">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">骨质疏松症：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guo2min" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guo2min">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guo2min">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">痛风：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guo3min" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guo3min">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guo3min">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肺癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guo4min" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guo4min">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guo4min">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">胃癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guo5min" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guo5min">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guo5min">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">肝癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guo6min" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guo6min">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guo6min">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+				<hr/>
+				<h5 style="line-height: 1.2em;top: 5px;position: relative">大肠癌：</h5>
+				<div class="mui-input-row" style="padding-left: 5px;padding-top: 5px;">
+					<input type="radio"  name="guo7min" >
+					<span style="font-size: 0.8em;color:grey;">从未患过</span>
+					<input type="radio"  name="guo7min">
+					<span style="font-size: 0.8em;color:grey;">曾经患过</span>
+					<input type="radio"  name="guo7min">
+					<span style="font-size: 0.8em;color:grey;">目前患有</span>
+				</div>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			//语音识别完成事件
+		</script>
+	</body>
+
+</html>

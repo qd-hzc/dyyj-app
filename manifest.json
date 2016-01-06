@@ -349,7 +349,8 @@
 					"images/aijiaren/tsfw.jpg",
 					"images/aijiaren/xtjc.jpg",
 					"images/aijiaren/xyjc.jpg",
-					"css/app.css"
+					"css/app.css",
+					"images/aijiaren/jiankangjiance.jpg"
 				],
 				"refer": [
 					"page/remind-drug.html",
@@ -364,7 +365,8 @@
 					"page/aijiaren/xychart.html",
 					"page/zixun.html",
 					"page/aijiaren/yyjl.html",
-					"page/set.html"
+					"page/set.html",
+					"page/aijiaren/check-health.html"
 				],
 				"priority": 0
 			},
@@ -571,7 +573,9 @@
 					"js/mui.min.js",
 					"fonts/mui.ttf",
 					"css/mui.min.css",
-					"images/shequ.png"
+					"images/shequ.png",
+					"images/tesefuwu/tese2.png",
+					"images/tesefuwu/tese1.png"
 				],
 				"refer": [],
 				"priority": 0
@@ -778,6 +782,15 @@
 				"refer": [
 					"page/main.html"
 				],
+				"priority": 0
+			},
+			"page/aijiaren/check-health.html": {
+				"resources": [
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/mui.min.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},
