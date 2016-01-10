@@ -92,34 +92,36 @@
 			</div>
 		</div>
 		<script src="../js/mui.min.js"></script>
-		<script src="../../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/service.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="http://192.168.0.103:8080/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			});
 			var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
-			DyyjDemo.getUserInfoById(getUserId(), function(result) {
+			DyyjDemo.getMemberByUserId(getUserId(), function(result) {
 				if (result && result.rs) {
 					var ms = result.ms;
+					console.log(JSON.stringify(ms))
 					if (ms) {
-						$('#username').val(ms.userName);
-						$('#idCard').val(ms.idCard);
-						$('#phone').val(ms.phone);
-						$('#height').val(ms.height);
-						$('#weight').val(ms.weight);
-						$('#xueXing').find(':radio').filter(function() {
-							return $.trim($(this).text()) == ms.xueXing;
-						}).attr('checked', 'checked');
-						$('#yinXing').find(':radio').filter(function() {
-							return $.trim($(this).text()) == ms.yinXing;
-						}).attr('checked', 'checked');
-						$('#guoMinShi').find(':radio').filter(function() {
-							return $.trim($(this).text()) == ms.guoMinShi;
-						}).attr('checked', 'checked');
-						$('#jiBing').find(':radio').filter(function() {
-							return $.trim($(this).text()) == ms.jiBing;
-						}).attr('checked', 'checked');
+						$('#username').val(ms.name);
+						$('#idCard').val(ms.idcard);
+						$('#phone').val(ms.mobile);
+//						$('#height').val(ms.height);
+//						$('#weight').val(ms.weight);
+//						$('#xueXing').find(':radio').filter(function() {
+//							return $.trim($(this).text()) == ms.xueXing;
+//						}).attr('checked', 'checked');
+//						$('#yinXing').find(':radio').filter(function() {
+//							return $.trim($(this).text()) == ms.yinXing;
+//						}).attr('checked', 'checked');
+//						$('#guoMinShi').find(':radio').filter(function() {
+//							return $.trim($(this).text()) == ms.guoMinShi;
+//						}).attr('checked', 'checked');
+//						$('#jiBing').find(':radio').filter(function() {
+//							return $.trim($(this).text()) == ms.jiBing;
+//						}).attr('checked', 'checked');
 					}
 				}
 			});

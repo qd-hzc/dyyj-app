@@ -69,25 +69,29 @@
 		<div class="mui-content" style="padding-left:10px;padding-right: 10px;">
 			<ul id="content" class="mui-table-view">
 				<li class="mui-table-view-cell" data-href='remind-drug.html'>
-					<img class="mui-media-object mui-pull-left" src="../images/aijiaren/yyjl.jpg" />
-					<span>每天</span>
-					<br/>
-					<span>7:00 12:00 18:00</span>
-					<div class="mui-switch mui-switch-mini mui-active">
-						<div class="mui-switch-handle"></div>
+					<div style="text-align: center;">
+						查询中...
 					</div>
 				</li>
 			</ul>
 		</div>
 	</body>
 	<script id="temp" type="text/template">
-		<li class="mui-table-view-cell" data-href='remind-drug.html'>
+		<li data-drug="<%=(drug)%>" class="mui-table-view-cell" data-href='remind-drug.html'>
 			<img class="mui-media-object mui-pull-left" src="../images/aijiaren/yyjl.jpg" />
 			<span><%=(drug)%></span>
 			<br/>
 			<span>每<%=(meitian)%>天     <%=(meici)%>次</span>
 			<div class="mui-switch mui-switch-mini mui-active">
 				<div class="mui-switch-handle"></div>
+			</div>
+		</li>
+	</script>
+	<script id="tempNone" type="text/html">
+		<li class="mui-table-view-cell" data-href='remind-drug.html'>
+			<div style="text-align: center;">
+
+				没有数据
 			</div>
 		</li>
 	</script>
@@ -102,17 +106,45 @@
 		});
 		var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
 		mui.plusReady(function() {
+			var self = plus.webview.currentWebview();
+			var time = self.time;
+			var drug = self.drug;
+			setTimeout(function() {
+				if (drug) {
+					plus.push.createMessage('该吃' + decodeURIComponent(drug) + '药了');
+					var ina = setInterval(function() {
+						setTimeout(function() {
+							plus.device.vibrate(500);
+						})
+					}, 1000);
+					setTimeout(function() {
+						clearInterval(ina)
+					}, 10000)
+					setTimeout(function() {
+						plus.device.beep(10);
+					})
+				}
+			}, 60000);
+			plus.webview.hide('tixing');
+			plus.webview.hide('remind-drug')
 			addRemindDrug();
 			editRemindDrug();
 			DyyjDemo.listRemindByMemberId(getUserId(), function(result) {
-				document.getElementById("content").innerHTML = result.ms.map(function(row) {
-					console.log(JSON.stringify(row))
-					return template('temp', row.json)
-				});
-			});
-			mui('.mui-switch-mini').on('tap', 'div', function(e) {
-				e.preventDefault();
-				e.stopPropagation();
+				var htmlStr = '';
+				if (result.rs) {
+					for (var i = 0; i < result.ms.length; i++) {
+						var d = result.ms[i];
+						d.json.drug = decodeURIComponent(d.json.drug);
+						htmlStr += template('temp', d.json);
+					}
+					document.getElementById("content").innerHTML = htmlStr;
+					mui('.mui-table-view-cell').on('tap', '.mui-switch', function(e) {
+						e.stopPropagation();
+					});
+					mui('.mui-switch')['switch']();
+				} else {
+					document.getElementById("content").innerHTML = document.getElementById("tempNone").innerHTML
+				}
 			});
 		})
 
@@ -128,9 +160,13 @@
 		function editRemindDrug() {
 			mui('.mui-table-view').on('tap', 'li', function() {
 				var href = this.getAttribute('data-href');
+				var drug = this.getAttribute('data-drug');
 				mui.openWindow({
 					id: 'remind-drug',
-					url: href
+					url: href,
+					extras: {
+						drug: drug
+					}
 				})
 			})
 		}

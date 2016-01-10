@@ -24,6 +24,14 @@
 		<script type="text/javascript" charset="utf-8">
 			mui.init();
 			mui.plusReady(function() {
+				plus.push.addEventListener("click", function(msg) {
+					// 分析msg.payload处理业务逻辑 
+					alert(msg.content);
+					mui.openWindow({
+						id:'main',
+						url:'page/main.html'
+					})
+				}, false);
 				//				checkVersion();
 				var isFirstInstall = window.localStorage.getItem("isFirstInstall");
 				/*if (isFirstInstall == "1") {

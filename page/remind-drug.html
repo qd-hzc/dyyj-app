@@ -155,6 +155,7 @@
 
 			function changeDrug(obj) {
 				var sel = obj.value;
+				window.drug = sel;
 				document.getElementById("drug").innerHTML = sel;
 			}
 
@@ -214,7 +215,7 @@
 			function baocun() {
 				document.getElementById("baocun").addEventListener('tap', function() {
 					var data = {
-						drug: document.getElementById("drug").innerHTML,
+						drug:encodeURIComponent( document.getElementById("drug").innerHTML),
 						meitian: document.getElementById("meitian").value,
 						meici: document.getElementById("meici").value,
 						time: times
@@ -223,9 +224,14 @@
 					DyyjDemo.saveRemind(getUserId(), data, function(result) {
 						if (result.rs) {
 							alert('保存成功');
+							plus.webview.hide('remind-drug-list.html')
 							mui.openWindow({
 								id: 'remind-drug-list-win',
-								url: 'remind-drug-list.html'
+								url: 'remind-drug-list.html',
+								extras:{
+									time:times[1],
+									drug:data.drug 
+								}
 							});
 						} else {
 							alert('保存失败');
