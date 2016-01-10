@@ -192,15 +192,17 @@
 							account: accountBox.value,
 							password: passwordBox.value
 						};
-						var count = '370201198508010937'
-						var psw = '000000'
+						//						var count = '370201198508010937'
+						//						var psw = '000000'
+						var count = accountBox.value;
+						var psw = passwordBox.value;
 						DyyjDemo.login(count, psw, function(result) {
 								if (result.rs) {
 									var memberId = result.ms;
 									setUserId(memberId);
 									toMain();
 								} else {
-									alert('用户名或密码错误');
+									alert(result.ms);
 								}
 							})
 							//plus.nativeUI.toast(err);
