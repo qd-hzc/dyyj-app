@@ -29,29 +29,29 @@
 				<h5 style="font-size: 1.1em;">基本信息</h5>
 				<h5 style="float: left;line-height: 30px;width:23%;">姓名：</h5>
 				<div class="mui-input-row mui-password" style="clear:none;">
-					<input type="text" class="">
+					<input id="username" type="text" class="">
 				</div>
 				<h5 style="float: left;line-height: 30px;width:23%;">身份证号：</h5>
 				<div class="mui-input-row mui-password" style="clear:none;">
-					<input type="text" class="">
+					<input id="idCard" type="text" class="">
 				</div>
 				<h5 style="float: left;line-height: 30px;width:23%;">手机号：</h5>
 				<div class="mui-input-row mui-password" style="clear:none;">
-					<input type="text" class="">
+					<input id="phone" type="text" class="">
 				</div>
 				<h5 style="font-size: 1.1em;">体征信息</h5>
 				<h5 style="float: left;line-height: 30px;width:23%;">身高：</h5>
 				<div class="mui-input-row mui-password" style="clear:none;">
-					<input type="text"  style="width:85%;">
+					<input id="height" type="text" style="width:85%;">
 					<span style="font-size: 0.8em;color:grey;">厘米</span>
 				</div>
 				<h5 style="float: left;line-height: 30px;width:23%;">体重：</h5>
 				<div class="mui-input-row mui-password" style="clear:none;">
-					<input type="text" class="" style="width:85%;">
+					<input id="weight" type="text" class="" style="width:85%;">
 					<span style="font-size: 0.8em;color:grey;">公斤</span>
 				</div>
 				<h5 style="float: left;line-height: 30px;width:23%;">血型：</h5>
-				<div class="mui-input-row mui-password" style="clear:none;padding-top:8px;">
+				<div id="xueXing" class="mui-input-row mui-password" style="clear:none;padding-top:8px;">
 					<input type="radio" class="" name="xuexing" checked="checked">
 					<span style="font-size: 0.8em;color:grey;">A</span>
 					<input type="radio" class="" name="xuexing">
@@ -62,7 +62,7 @@
 					<span style="font-size: 0.8em;color:grey;">O</span>
 				</div>
 				<h5 style="float: left;line-height: 30px;width:23%;clear: left;">RH阴性：</h5>
-				<div class="mui-input-row mui-password" style="clear:none;padding-top:18px;">
+				<div id="yinXing" class="mui-input-row mui-password" style="clear:none;padding-top:18px;">
 					<input type="radio" class="" name="rh" checked="checked">
 					<span style="font-size: 0.8em;color:grey;">是</span>
 					<input type="radio" class="" name="rh">
@@ -71,7 +71,7 @@
 					<span style="font-size: 0.8em;color:grey;">未知</span>
 				</div>
 				<h5 style="float: left;line-height: 30px;width:23%;clear: left;">过敏史：</h5>
-				<div class="mui-input-row mui-password" style="clear:none;padding-top:18px;">
+				<div id="guoMinShi" class="mui-input-row mui-password" style="clear:none;padding-top:18px;">
 					<input type="checkbox" class="" name="guomin">
 					<span style="font-size: 0.8em;color:grey;">青霉素</span>
 					<input type="checkbox" class="" name="guomin">
@@ -81,7 +81,7 @@
 				</div>
 				<h5 style="font-size: 1.1em;clear:left;margin-top:20px;">既往病史</h5>
 				<h5 style="float: left;line-height: 30px;width:23%;clear: left;">疾病：</h5>
-				<div class="mui-input-row mui-password" style="clear:none;padding-top:8px;">
+				<div id="jiBing" class="mui-input-row mui-password" style="clear:none;padding-top:8px;">
 					<input type="checkbox" class="" name="jibing">
 					<span style="font-size: 0.8em;color:grey;">高血压</span>
 					<input type="checkbox" class="" name="jibing">
@@ -92,11 +92,37 @@
 			</div>
 		</div>
 		<script src="../js/mui.min.js"></script>
+		<script src="../../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://192.168.0.103:8080/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			});
-			//语音识别完成事件
+			var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
+			DyyjDemo.getUserInfoById(getUserId(), function(result) {
+				if (result && result.rs) {
+					var ms = result.ms;
+					if (ms) {
+						$('#username').val(ms.userName);
+						$('#idCard').val(ms.idCard);
+						$('#phone').val(ms.phone);
+						$('#height').val(ms.height);
+						$('#weight').val(ms.weight);
+						$('#xueXing').find(':radio').filter(function() {
+							return $.trim($(this).text()) == ms.xueXing;
+						}).attr('checked', 'checked');
+						$('#yinXing').find(':radio').filter(function() {
+							return $.trim($(this).text()) == ms.yinXing;
+						}).attr('checked', 'checked');
+						$('#guoMinShi').find(':radio').filter(function() {
+							return $.trim($(this).text()) == ms.guoMinShi;
+						}).attr('checked', 'checked');
+						$('#jiBing').find(':radio').filter(function() {
+							return $.trim($(this).text()) == ms.jiBing;
+						}).attr('checked', 'checked');
+					}
+				}
+			});
 		</script>
 	</body>
 
