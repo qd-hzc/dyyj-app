@@ -178,7 +178,7 @@
 				});
 			}
 			var times = [];
-			times[0]='1';
+			times[0] = '1';
 
 			function selectTime(obj) {
 				var dTime = new Date();
@@ -206,6 +206,8 @@
 					});
 				}
 				document.getElementById("selectTime").innerHTML = htmlStr;
+				times = [];
+				times[0] = '1';
 			}
 			var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
 
@@ -214,7 +216,8 @@
 					var data = {
 						drug: document.getElementById("drug").innerHTML,
 						meitian: document.getElementById("meitian").value,
-						meici: document.getElementById("meici").value
+						meici: document.getElementById("meici").value,
+						time: times
 					}
 					console.log(JSON.stringify(data))
 					DyyjDemo.saveRemind(getUserId(), data, function(result) {
