@@ -53,23 +53,16 @@
 	<body>
 		<header class="mui-bar mui-bar-nav">
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<h1 id="title" class="mui-title">医保政策</h1>
+			<h1 id="title1" class="mui-title">详情</h1>
 		</header>
-
 		<div class="mui-content" style="padding-left:10px;padding-right: 10px;">
 			<div class="title" style="text-align: center;">
-				<b>健康查体费用纳入门诊统筹报销有哪些具体规定？</b>
+				<b id="title"></b>
 			</div>
 			<span>2015/09/20</span>
 			<hr/>
-			<p style="text-indent: 2em;">
-				定点社区可为签约人每年安排一次基础查体，查体费用在签约
-				人年度门诊统筹限额内支付。定点社区应为所有签约人建立健康
-				档案，有计划的进行健康筛查，分类实施慢性病干预和健康教育。
-				市（区）已统一实行健康查体的人员，按相关规定执行。
-			</p>
-			<p style="color: red;">
-				政策出处《青岛市社会医疗保险门诊统筹政策问答（2015版）》
+			<p id="html" style="text-indent: 2em;">
+				
 			</p>
 			<span>阅读数：46</span>
 		</div>
@@ -78,6 +71,13 @@
 	<script>
 		mui.init({
 			swipeBack:true //启用右滑关闭功能
+		});
+		mui.plusReady(function(){
+			var self = plus.webview.currentWebview();
+			var title = self.title;
+			var html= self.html;
+			document.getElementById("title").innerHTML = title;
+			document.getElementById("html").innerHTML = html;
 		});
 	</script>
 </html>
