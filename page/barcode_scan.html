@@ -9,7 +9,11 @@
 		<title>Hello H5+</title>
 		<script src="../js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" src="../js/common.js"></script>
+		<script src="../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://192.168.0.103:8080/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
+
 		<script type="text/javascript">
+			var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
 			var ws = null,
 				wo = null;
 			var scan = null,
@@ -66,34 +70,32 @@
 						break;
 				}
 				result = result.replace(/\n/g, '');
-//				mui.ajax('', {
-//						data: {
-//							tiaoma: result
-//						},
-//						dataType: 'json',
-//						type: 'post',
-//						success: function(data) {
-							data = '999';
-							var mess = '药物：' + data;
+				DyyjDemo.getInfoByBarcode(result, function(result) {
+						if (result.rs) {
+							var name = result.ms.item_name;
+							var mess = '药物：' + name;
 							plus.nativeUI.confirm(mess, function(e) {
 								if (e.index == 0) {
-									var m = plus.webview.currentWebview();
-									plus.webview.close(m);
 									mui.openWindow({
 										id: 'tixing',
 										url: 'remind-drug.html',
 										extras: {
-											drug: data
+											drug: name
 										}
 									});
+
 								} else {
 									var m = plus.webview.currentWebview();
 									plus.webview.close(m);
 								}
 								(e.index == 0) ? "Yes!" : "No!"
 							}, "确认", ["确定", "取消"]);
-//						}
-//					})
+						} else {
+							alert(result.ms);
+							var m = plus.webview.currentWebview();
+							plus.webview.close(m);
+						}
+					})
 					//				wo.evalJS("scaned('" + type + "','" + result + "','" + file + "');");
 					//				back();
 			}

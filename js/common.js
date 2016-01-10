@@ -54,6 +54,7 @@ var openw=null,waiting=null;
  */
 w.clicked=function(id,wa,ns,ws){
 	if(openw){//避免多次打开同一个页面
+		openw.show();
 		return null;
 	}
 	if(w.plus){

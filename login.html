@@ -119,7 +119,7 @@
 						border-color: #e70012;height: 38px;padding: 0px;">
 							登&nbsp;&nbsp;&nbsp;录</button>
 					</center>
-					<div class="link-area" ><a id='reg' style="color: black !important;">注册账号</a> <span class="spliter">|</span> <a id='forgetPassword' style="color: black !important;">忘记密码</a>
+					<div class="link-area"><a id='reg' style="color: black !important;">注册账号</a> <span class="spliter">|</span> <a id='forgetPassword' style="color: black !important;">忘记密码</a>
 					</div>
 				</div>
 			</div>
@@ -127,7 +127,12 @@
 		<script src="js/mui.min.js"></script>
 		<script src="js/mui.enterfocus.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/service.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://192.168.0.103:8080/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
 		<script>
+			var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
 			(function($, doc) {
 				$.init({
 					statusBarBackground: '#f7f7f7'
@@ -169,48 +174,6 @@
 						});
 					} else if (settings.autoLogin && state.token) {
 						toMain();
-					} else {
-						//第三方登录
-						var auths = {};
-						var oauthArea = doc.querySelector('.oauth-area');
-						//						plus.oauth.getServices(function(services) {
-						//							for (var i in services) {
-						//								var service = services[i];
-						//								auths[service.id] = service;
-						//								var btn = document.createElement('div');
-						//								btn.setAttribute('class', 'oauth-btn');
-						//								btn.authId = service.id;
-						//								btn.style.backgroundImage = 'url("images/' + service.id + '.png")'
-						//									//alert(service.id);
-						//									//btn.innerText = service.description + "登录";
-						//								oauthArea.appendChild(btn);
-						//							}
-						//							$(oauthArea).on('tap', '.oauth-btn', function() {
-						//								var auth = auths[this.authId];
-						//								var waiting = plus.nativeUI.showWaiting();
-						//								auth.login(function() {
-						//									waiting.close();
-						//									plus.nativeUI.toast("登录认证成功");
-						//									//alert(JSON.stringify(auth.authResult));
-						//									auth.getUserInfo(function() {
-						//										plus.nativeUI.toast("获取用户信息成功");
-						//										//alert(JSON.stringify(auth.userInfo));
-						//										var name = auth.userInfo.nickname || auth.userInfo.name;
-						//										app.createState(name, function() {
-						//											toMain();
-						//										});
-						//									}, function(e) {
-						//										plus.nativeUI.toast("获取用户信息失败：" + e.message);
-						//									});
-						//								}, function(e) {
-						//									waiting.close();
-						//									plus.nativeUI.toast("登录认证失败：" + e.message);
-						//								});
-						//							});
-						//						}, function(e) {
-						//							oauthArea.style.display = 'none';
-						//							plus.nativeUI.toast("获取登录认证失败：" + e.message);
-						//						});
 					}
 					// close splash
 					setTimeout(function() {
@@ -229,14 +192,18 @@
 							account: accountBox.value,
 							password: passwordBox.value
 						};
-						toMain();
-						//						app.login(loginInfo, function(err) {
-						//							if (err) {
-						//								plus.nativeUI.toast(err);
-						//								return;
-						//							}
-						//							toMain();
-						//						});
+						var count = '370201198508010937'
+						var psw = '000000'
+						DyyjDemo.login(count, psw, function(result) {
+								if (result.rs) {
+									var memberId = result.ms;
+									setUserId(memberId);
+									toMain();
+								} else {
+									alert('用户名或密码错误');
+								}
+							})
+							//plus.nativeUI.toast(err);
 					});
 					$.enterfocus('#login-form input', function() {
 						$.trigger(loginButton, 'tap');
@@ -280,9 +247,6 @@
 						});
 					}, false);
 					//
-					window.addEventListener('resize', function() {
-						oauthArea.style.display = document.body.clientHeight > 400 ? 'block' : 'none';
-					}, false);
 					//
 					var backButtonPress = 0;
 					$.back = function(event) {

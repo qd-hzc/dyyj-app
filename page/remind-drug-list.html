@@ -67,12 +67,12 @@
 		</header>
 
 		<div class="mui-content" style="padding-left:10px;padding-right: 10px;">
-			<ul class="mui-table-view">
+			<ul id="content" class="mui-table-view">
 				<li class="mui-table-view-cell" data-href='remind-drug.html'>
-					<img class="mui-media-object mui-pull-left" src="../images/aijiaren/yyjl.jpg"/>
+					<img class="mui-media-object mui-pull-left" src="../images/aijiaren/yyjl.jpg" />
 					<span>每天</span>
 					<br/>
-						<span>7:00 12:00 18:00</span>
+					<span>7:00 12:00 18:00</span>
 					<div class="mui-switch mui-switch-mini mui-active">
 						<div class="mui-switch-handle"></div>
 					</div>
@@ -80,14 +80,40 @@
 			</ul>
 		</div>
 	</body>
+	<script id="temp" type="text/template">
+		<li class="mui-table-view-cell" data-href='remind-drug.html'>
+			<img class="mui-media-object mui-pull-left" src="../images/aijiaren/yyjl.jpg" />
+			<span><%=(drug)%></span>
+			<br/>
+			<span>每<%=(meitian)%>天     <%=(meici)%>次</span>
+			<div class="mui-switch mui-switch-mini mui-active">
+				<div class="mui-switch-handle"></div>
+			</div>
+		</li>
+	</script>
 	<script src="../js/mui.min.js"></script>
+	<script src="../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://192.168.0.103:8080/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/arttmpl.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/service.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		mui.init({
 			swipeBack: true //启用右滑关闭功能
 		});
+		var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
 		mui.plusReady(function() {
 			addRemindDrug();
 			editRemindDrug();
+			DyyjDemo.listRemindByMemberId(getUserId(), function(result) {
+				document.getElementById("content").innerHTML = result.ms.map(function(row) {
+					console.log(JSON.stringify(row))
+					return template('temp', row.json)
+				});
+			});
+			mui('.mui-switch-mini').on('tap', 'div', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+			});
 		})
 
 		function addRemindDrug() {
@@ -98,13 +124,13 @@
 				});
 			});
 		}
-		function editRemindDrug(){
-			mui('.mui-table-view').on('tap','li',function(){
-				console.log(11)
+
+		function editRemindDrug() {
+			mui('.mui-table-view').on('tap', 'li', function() {
 				var href = this.getAttribute('data-href');
 				mui.openWindow({
-					id:'remind-drug',
-					url:href
+					id: 'remind-drug',
+					url: href
 				})
 			})
 		}

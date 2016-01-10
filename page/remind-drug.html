@@ -69,29 +69,39 @@
 				<li class="mui-table-view-cell">
 					<span>重复</span>
 					<div style="width: 50%;float: right;margin-top: -9px;margin-bottom: -9px;">
-						<select class="mui-btn mui-btn-block">
-							<option value="">每天</option>
-							<option value="我">每2天</option>
-							<option value="李静">每3天</option>
-							<option value="王立军">每4天</option>
-							<option value="">每5天</option>
-							<option value="">每6天</option>
-							<option value="">每7天</option>
-							<option value="">每8天</option>
+						<select id="meitian" class="mui-btn mui-btn-block">
+							<option value="1">每天</option>
+							<option value="2">每2天</option>
+							<option value="3">每3天</option>
+							<option value="4">每4天</option>
+							<option value="5">每5天</option>
+							<option value="6">每6天</option>
+							<option value="7">每7天</option>
+							<option value="8">每8天</option>
 						</select>
 					</div>
 				</li>
 				<li class="mui-table-view-cell">
 					<span>次数</span>
 					<div style="width: 50%;float: right;margin-top: -9px;margin-bottom: -9px;">
-						<select class="mui-btn mui-btn-block">
-							<option value="">1次</option>
-							<option value="">2次</option>
-							<option value="">3次</option>
-							<option value="">4次</option>
-							<option value="">5次</option>
+						<select onchange="onchangeCi(this);" id="meici" class="mui-btn mui-btn-block">
+							<option value="1">1次</option>
+							<option value="2">2次</option>
+							<option value="3">3次</option>
+							<option value="4">4次</option>
+							<option value="5">5次</option>
 						</select>
 					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<ul class="mui-table-view" id="selectTime">
+						<li class="mui-table-view-cell">
+							<span>第1次</span>
+							<div style="width: 60%;float: right;margin-top: -9px;margin-bottom: -9px;">
+								<button onclick="selectTime(this);" type="button" class="time mui-btn mui-btn-block">选择时间</button>
+							</div>
+						</li>
+					</ul>
 				</li>
 				<li class="mui-table-view-cell">
 					<span>起始日期</span>
@@ -107,19 +117,35 @@
 				</li>
 			</ul>
 			<center>
-				<button class="mui-btn mui-btn-block mui-btn-primary" style="width: 90%;" onclick="return false;">完成</button>
+				<button id="baocun" class="mui-btn mui-btn-block mui-btn-primary" style="width: 90%;" onclick="return false;">完成</button>
 			</center>
 		</div>
+		<script id="temp" type="text/template">
+			<li class="mui-table-view-cell">
+				<span>第<%=(time)%>次</span>
+				<div style="width: 60%;float: right;margin-top: -9px;margin-bottom: -9px;">
+					<button data-time='<%=(time)%>' onclick="selectTime(this);" type="button" class="time mui-btn mui-btn-block">选择时间</button>
+				</div>
+			</li>
+		</script>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/arttmpl.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/service.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://192.168.0.103:8080/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			});
 			mui.plusReady(function() {
 				var self = plus.webview.currentWebview();
-				var drug = self.drug;
-				document.getElementById("drug").innerHTML = drug;
-				document.getElementById("selectDrug").style.display = 'none';
+				window.drug = self.drug;
+				if (window.drug) {
+					document.getElementById("drug").innerHTML = window.drug;
+					document.getElementById("selectDrug").style.display = 'none';
+				}
+				plus.webview.hide('barcode_scan.html');
+				baocun();
 			});
 
 			function changeUser(obj) {
@@ -149,6 +175,59 @@
 					date: dDate,
 					minDate: minDate,
 					maxDate: maxDate
+				});
+			}
+			var times = [];
+			times[0]='1';
+
+			function selectTime(obj) {
+				var dTime = new Date();
+				dTime.setHours(6, 0);
+				plus.nativeUI.pickTime(function(e) {
+					var d = e.date;
+					obj.innerHTML = d.getHours() + ":" + d.getMinutes();
+					var ti = obj.getAttribute('data-time');
+					times[ti] = d.getHours() + ":" + d.getMinutes();
+				}, function(e) {
+					//					obj.innerText = "您没有选择时间"
+				}, {
+					title: "请选择时间",
+					is24Hour: true,
+					time: dTime
+				});
+			}
+
+			function onchangeCi(obj) {
+				var time = obj.value;
+				var htmlStr = '';
+				for (var i = 0; i < time; i++) {
+					htmlStr += template('temp', {
+						time: i + 1
+					});
+				}
+				document.getElementById("selectTime").innerHTML = htmlStr;
+			}
+			var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
+
+			function baocun() {
+				document.getElementById("baocun").addEventListener('tap', function() {
+					var data = {
+						drug: document.getElementById("drug").innerHTML,
+						meitian: document.getElementById("meitian").value,
+						meici: document.getElementById("meici").value
+					}
+					console.log(JSON.stringify(data))
+					DyyjDemo.saveRemind(getUserId(), data, function(result) {
+						if (result.rs) {
+							alert('保存成功');
+							mui.openWindow({
+								id: 'remind-drug-list-win',
+								url: 'remind-drug-list.html'
+							});
+						} else {
+							alert('保存失败');
+						}
+					})
 				});
 			}
 		</script>

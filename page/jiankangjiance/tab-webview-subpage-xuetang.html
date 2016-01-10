@@ -65,35 +65,67 @@
 			</ul>
 		</div>
 	</body>
-	<script id='temp' type="text/template">
+	<script id='temp' type="text/html">
 		<li class="mui-table-view-cell">
 			<div class="mui-slider-cell">
 				<div class="oa-contact-cell mui-table">
 					<div class="oa-contact-content mui-table-cell">
 						<div class="mui-clearfix">
-							<h4 class="oa-contact-name">史强</h4>
-							<span class="oa-contact-position mui-h6">员工</span>
+							<h4 class="oa-contact-name" style="float:none;">分数:<%=(data.score)%></h4>
+						</div>
+						<div>
+							<p style="color:green;">血糖值(mmHg)：<%=(data.bloodvalue)%></p>
+							<p style="color:green;"><%=(data.docTip)%></p>
 						</div>
 						<p class="oa-contact-email mui-h6" style="text-align: right;">
-							shiqiang@gmail.com
+							<%=(data.testtime)%>
 						</p>
 					</div>
 				</div>
 			</div>
 		</li>
 	</script>
+	<script id='temp2' type="text/html">
+		<li class="mui-table-view-cell">
+			<div class="mui-slider-cell">
+				<div class="oa-contact-cell mui-table">
+					<div class="oa-contact-content mui-table-cell">
+						<div class="mui-clearfix">
+							<h4 class="oa-contact-name">暂无记录</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</script>
+	<script src="../../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://192.168.0.103:8080/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/service.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../../js/mui.min.js"></script>
+	<script src="../../js/arttmpl.js" type="text/javascript" charset="utf-8"></script>
 	<script>
+		var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
 		mui.init({
 			swipeBack: true //启用右滑关闭功能
 		});
 		mui.plusReady(function() {
-			var temp = document.getElementById("temp").innerHTML;
+			var temp = document.getElementById("temp").innerText;
 			var htmlStr = '';
-			for (var i = 0; i < 10; i++) {
-				htmlStr += temp;
-			}
-			document.getElementById("content").innerHTML = htmlStr;
+			var userId = getUserId();
+			DyyjDemo.xueTangHistory(userId, function(result) {
+				if (result.rs) {
+					var data = result.ms;
+					for (var i = 0; i < data.length; i++) {
+						var e = data[i];
+						htmlStr += template('temp', {
+							data: e
+						});
+					}
+				} else {
+					htmlStr = document.getElementById("temp2");
+				}
+				document.getElementById("content").innerHTML = htmlStr;
+			});
 		});
 	</script>
 
