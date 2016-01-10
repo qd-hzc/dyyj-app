@@ -51,7 +51,6 @@
 			}, false);
 			// 二维码扫描成功
 			function onmarked(type, result, file) {
-				console.log('tiao')
 				switch (type) {
 					case plus.barcode.QR:
 						type = "QR";
@@ -78,6 +77,8 @@
 							var mess = '药物：' + data;
 							plus.nativeUI.confirm(mess, function(e) {
 								if (e.index == 0) {
+									var m = plus.webview.currentWebview();
+									plus.webview.close(m);
 									mui.openWindow({
 										id: 'tixing',
 										url: 'remind-drug.html',
@@ -85,8 +86,6 @@
 											drug: data
 										}
 									});
-									var m = plus.webview.currentWebview();
-									plus.webview.close(m);
 								} else {
 									var m = plus.webview.currentWebview();
 									plus.webview.close(m);
