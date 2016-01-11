@@ -42,7 +42,7 @@
 			<div class="title my-red">
 				<div id="">
 					<img src="../images/settings/touxiang.jpg" />
-					<span class="my-title">尹彬</span>
+					<span class="my-title" id="name"></span>
 					<img src="../images/erweima/erweima.jpg" class="mui-pull-right" />
 				</div>
 			</div>
@@ -85,7 +85,7 @@
 					</a>
 				</li>
 				<li class="mui-table-view-cell" data-url='set.html'>
-					<a class="mui-navigate-right" >
+					<a class="mui-navigate-right">
 						设置
 					</a>
 				</li>
@@ -101,6 +101,9 @@
 		</style>
 	</body>
 	<script src="../js/mui.min.js"></script>
+	<script src="../js/service.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/choujiang/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://121.42.151.57:7999/service/dyyj/demo.js/helper.js" type="text/javascript" charset="utf-8"></script>
 	<script>
 		mui.init({
 			swipeBack: true //启用右滑关闭功能
@@ -125,6 +128,16 @@
 				url:url
 			});
 		});
+		var DyyjDemo = new DyyjDemo('/service/dyyj/demo.js');
+			DyyjDemo.getMemberByUserId(getUserId(), function(result) {
+				if (result && result.rs) {
+					var ms = result.ms;
+					console.log(JSON.stringify(ms))
+					if (ms) {
+						document.getElementById("name").innerHTML = ms.name;
+					}
+				}
+			});
 	</script>
 
 </html>
